@@ -41,8 +41,8 @@ function getMostPopularBooks(books) {
   .map((book) => {
    return { name: book.title, count: book.borrows.length };
   })
-  .sort((a, b) => (a.count < b.count ? 1 : -1))
-  .slice(0, 5);
+ let popularBooks = books.sort((a, b) => (a.count < b.count ? 1 : -1)).slice(0, 5);
+  return popularBooks; /* The technical coach I was talking to just left me on the open chat messages about this being the correct helper function. Left me in the chat /*
 };
 
 function getMostPopularAuthors(books, authors) {
